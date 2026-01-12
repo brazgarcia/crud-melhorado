@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crud-melhorado</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>Formulário de cadastro de usuário</h1>
+
+        <form id="userForm">
+            <input type="text" name="nome" id="nome" placeholder="Nome" required>
+            <input type="email" name="email" id="email" placeholder="E-mail" required>
+            <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required> 
+            <input type="text" name="cidade" id="cidade" placeholder="Digire sua cidade" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <h1>formulário de cadastro de produtos </h1>
+
+        <form id="productForm">
+            <input type="text" name="nomeProduto" id="nomeProduto" placeholder="Nome do produto" required>
+            <input type="text" id="codBarras" name="codBarras" placeholder="Insira o código de barras" required>
+            <input type="text" id="categoria" name="categoria" placeholder="Categoria do produto" required>
+            <input type="text" id="descricao" name="descricao" placeholder="Descrição do produto">
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+    
+    <footer></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
