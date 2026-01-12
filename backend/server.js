@@ -9,7 +9,7 @@ let users = [];
 let idCounterUser = 1;
 
 let products = [];
-let idCounterProducts = 1;
+let idCounterProduct = 1;
 
 // Users
     // Create
@@ -33,15 +33,15 @@ let idCounterProducts = 1;
     // Update
     app.put('/users/:id', (req, res) => {
         const id = parseInt(req.params.id);
-        const user = (u => u.id === id);
+        const user = users.find(u => u.id === id);
 
-        if(!user) return res.status(404).json({Error: "Usuário não encontrado" });
+        if (!user) return res.status(404).json({ error: "Usuário não encontrado" });
 
         user.nome = req.body.nome;
         user.email = req.body.email;
         user.telefone = req.body.telefone;
-        user.cidade = req.bosy.cidade;
-        res.json(users);
+        user.cidade = req.body.cidade;
+        res.json(user);
     });
 
     // Delete
@@ -53,27 +53,43 @@ let idCounterProducts = 1;
 // Products
     // Creat
     app.post('/products', (req, res) => {
-        product = {
-            id: idCounterProducts++, 
-            nomeProduto: req.params.nome-produto,
-            codBarra: req.params.codBarras,
-            descricao: req.params.descricao,
-            categoria: req.params.categoria
+        const product = {
+            id: idCounterProduct++, 
+            nomeProduto: req.body.nomeProduto,
+            codBarras: req.body.codBarras,
+            descricao: req.body.descricao,
+            categoria: req.body.categoria
         };
         products.push(product);
-        app.status(201).json();
+        res.status(201).json(product);
     });
 
     // Read
-    app.get('/produtcs', (req, res) => {
+    app.get('/products', (req, res) => {
         res.json(products);
     });
 
     // Update
     app.put('/products/:id', (req, res) => {
-        
-    })
+        const id = parseInt(req.params.id);
+        const product = products.find(u => u.id === id);
 
+        if(!product) return res.status(404).json({ error: "Produto não encontrado" });
+
+        product.nomeProduto = req.body.nomeProduto;
+        product.codBarras = req.body.codBarras;
+        product.descricao = req.body.descricao;
+        product.categoria = req.body.categoria;
+        res.json(product);
+    });
+
+    // Delete
+    app.delete('/products/:id', (req, res) => {
+        products = products.filter(u => u.id !== parseInt(req.params.id));
+        res.status(204).send();
+    });
+
+// Startar servidor
 app.listen(3000, () => {
     console.log("Servidor rodando no link http://localhost:3000");
 })
