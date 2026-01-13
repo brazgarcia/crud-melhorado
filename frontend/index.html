@@ -9,31 +9,61 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    <header></header>
-    <main>
-        <h1>Formulário de cadastro de usuário</h1>
+<body class="corpo">
+    <header class="cabecalho">
+        <h3 class="cabecalho__titulo">Desenvolvendo um CRUD simples com cadastro de usuário e produtos</h3>
+    </header>
+    <main class="conteudo">
+        <div>
+            <section class="conteudo__section">
+                <h1 class="conteudo__titulo conteudo__titulo-usuarios">Formulário de cadastro de usuário</h1>
 
-        <form id="userForm">
-            <input type="text" name="nome" id="nome" placeholder="Nome" required>
-            <input type="email" name="email" id="email" placeholder="E-mail" required>
-            <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required> 
-            <input type="text" name="cidade" id="cidade" placeholder="Digire sua cidade" required>
-            <button type="submit">Cadastrar</button>
-        </form>
+                <form class="conteudo__formulario-usuarios" id="userForm">
+                    <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required> 
+                    <input type="text" name="cidade" id="cidade" placeholder="Digire sua cidade" required>
+                    <div class="botoes">
+                        <button class="botao submit" type="submit">Cadastrar</button>
+                        <button class="botao reset" type="reset">Limpar</button>
+                    </div>
+                    
+                </form>
+            </section>
 
-        <h1>formulário de cadastro de produtos </h1>
+            <section class="conteudo__section">
+                <h1 class="conteudo__titulo conteudo__titulo-produto">Formulário de cadastro de produtos </h1>
 
-        <form id="productForm">
-            <input type="text" name="nomeProduto" id="nomeProduto" placeholder="Nome do produto" required>
-            <input type="text" id="codBarras" name="codBarras" placeholder="Insira o código de barras" required>
-            <input type="text" id="categoria" name="categoria" placeholder="Categoria do produto" required>
-            <input type="text" id="descricao" name="descricao" placeholder="Descrição do produto">
-            <button type="submit">Cadastrar</button>
-        </form>
+                <form id="productForm">
+                    <input type="text" name="nomeProduto" id="nomeProduto" placeholder="Nome do produto" required>
+                    <input type="text" id="codBarras" name="codBarras" placeholder="Insira o código de barras" required>
+                    <input type="text" id="categoria" name="categoria" placeholder="Categoria do produto" required>
+                    <input type="text" id="descricao" name="descricao" placeholder="Descrição do produto">
+                    <div class="botoes">
+                        <button class="botao submit" type="submit">Cadastrar</button>
+                        <button class="botao reset" type="reset">Limpar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+
+        <div class="conteudo__listagem">
+            <h2 class="listagem__titulo">Lista de usuários cadastrados</h2>
+                <ul class="listagem" id="usersList">
+
+                </ul>
+            <h2 class="listagem__titulo">lista de produtos cadastrados</h2>
+                <ul class="listagem" id="productsList">
+
+                </ul>
+        </div>
     </main>
     
-    <footer></footer>
+    <footer class="rodape">
+        <p class="rodape__texto">Desenvolvido por Braz Garcia</p>
+        <p class="rodape__texto">Conteúdo de estudo!</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

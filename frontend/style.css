@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+.corpo {
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.cabecalho {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho__titulo {
+    margin: 15px;
+    border: solid 1px black;
+    padding: 5px 10px;
+}
+
+.conteudo {
+    margin: 45px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.conteudo__section {
+    background-color: grey;
+}
+
+.conteudo__titulo {
+    text-align: center;
+}
+
+.conteudo__listagem {
+    background-color: gray;
+}
+
+.botoes {
+   text-align: center;
+}
+
+.botao {
+    margin: 3px;
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.submit {
+    background-color: green;
+    color: white;
+    border: solid 1px green;
+}
+
+.reset {
+    background-color: red;
+    color: black;
+    border: solid 1px red;
+}
+.rodape {
+    background-color: green;
+}
+
