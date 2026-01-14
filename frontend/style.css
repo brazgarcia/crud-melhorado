@@ -20,6 +20,7 @@
     margin: 15px;
     border: solid 1px black;
     padding: 5px 10px;
+    background-color: grey;
 }
 
 .conteudo {
@@ -31,10 +32,25 @@
 
 .conteudo__section {
     background-color: grey;
+    
 }
 
 .conteudo__titulo {
     text-align: center;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formulario-dados {
+    border: solid 1px black;
+    border-radius: 2px;
+}
+
+.formulario-dados::placeholder {
+    color: rgb(59, 58, 58);
 }
 
 .conteudo__listagem {
@@ -48,21 +64,36 @@
 .botao {
     margin: 3px;
     padding: 3px;
-    border-radius: 7px;
+    border-radius: 5px;
 }
 
 .submit {
     background-color: green;
-    color: white;
-    border: solid 1px green;
+    color: black;
+    border: solid 2px black;
+    cursor: pointer;
 }
 
 .reset {
     background-color: red;
     color: black;
-    border: solid 1px red;
+    border: solid 2px black;
+    cursor: pointer;
 }
+
+.conteudo__listagem {
+    display: flex;
+    flex-direction: column;
+}
+
+.listagem__titulo {
+    text-align: center;
+}
+
 .rodape {
     background-color: green;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
