@@ -16,6 +16,7 @@ let idCounter = 1;
         const user = {
             id: idCounter++,
             nome: req.body.nome,
+            cpf: req.body.cpf,
             email: req.body.email,
             telefone: req.body.telefone,
             cidade: req.body.cidade
@@ -37,6 +38,7 @@ let idCounter = 1;
         if (!user) return res.status(404).json({ error: "Usuário não encontrado" });
 
         user.nome = req.body.nome;
+        user.cpf = req.body.cpf;
         user.email = req.body.email;
         user.telefone = req.body.telefone;
         user.cidade = req.body.cidade;

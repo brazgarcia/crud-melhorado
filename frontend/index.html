@@ -10,33 +10,36 @@
 
 </head>
 <body class="corpo">
+
     <header class="cabecalho">
         <h3 class="cabecalho__titulo">Desenvolvendo um CRUD simples com cadastro de usuários</h3>
     </header>
-    <main class="conteudo">
-            <section class="conteudo__section">
-                <h1 class="conteudo__titulo conteudo__titulo-usuarios">Formulário de cadastro de usuário</h1>
 
-                <form class="conteudo__formulario" id="userForm">
-                    <div class="inputs">
-                        <input class="formulario-dados" type="text" name="nome" id="nome" placeholder="Nome" required>
-                        <input class="formulario-dados" type="email" name="email" id="email" placeholder="E-mail" required>
-                        <input class="formulario-dados" type="tel" name="telefone" id="telefone" placeholder="Telefone" required> 
-                        <input class="formulario-dados" type="text" name="cidade" id="cidade" placeholder="Digire sua cidade" required>
-                    </div>
-                    <div class="botoes">
-                        <button class="botao submit" type="submit">Cadastrar</button>
-                        <button class="botao reset" type="reset">Limpar</button>
-                    </div>
-                </form>
-            </section>
+    <main class="conteudo">
+        <section class="conteudo__section">
+            <h1 class="conteudo__titulo conteudo__titulo-usuarios">Formulário de cadastro de usuário</h1>
+
+            <form class="conteudo__formulario" id="userForm">
+                <div class="inputs">
+                    <input class="formulario-dados" type="text" name="nome" id="nome" placeholder="Nome" required>
+                    <input class="formulario-dados" type="text" name="cpf" id="cpf" placeholder="CPF" required>
+                    <input class="formulario-dados" type="email" name="email" id="email" placeholder="E-mail" required>
+                    <input class="formulario-dados" type="tel" name="telefone" id="telefone" placeholder="Telefone" required> 
+                    <input class="formulario-dados" type="text" name="cidade" id="cidade" placeholder="Digire sua cidade" required>
+                </div>
+                <div class="botoes">
+                    <button class="botao submit" type="submit">Cadastrar</button>
+                    <button class="botao reset" type="reset">Limpar</button>
+                </div>
+            </form>
+        </section>
     
-        <div class="conteudo__listagem">
+        <section class="conteudo__listagem">
             <h2 class="listagem__titulo">Lista de usuários cadastrados</h2>
                 <ul class="listagem" id="usersList">
 
                 </ul>
-        </div>
+        </section>
     </main>
     
     <footer class="rodape">
