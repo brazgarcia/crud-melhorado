@@ -1,3 +1,9 @@
+:root {
+    --cor-principal: #08a122;
+    --cor-segundaria: #ffffff;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -29,12 +35,27 @@
 }
 
 .conteudo__section {
-    background-color: grey; 
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px; 
+    gap: 80px;
 }
 
 .conteudo__titulo {
     text-align: center;   
 }
+
+.conteudo__texto { 
+    text-align: center;
+}
+
+.conteudo__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
 
 .inputs {
     max-width: 100%;
@@ -93,3 +114,12 @@
     text-align: center;
 }
 
+
+/* Resposividade */
+@media screen and (max-width: 1728px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
