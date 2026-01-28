@@ -1,45 +1,40 @@
 :root {
-    --cor-principal: #08a122;
-    --cor-segundaria: #ffffff;
+    --cor-principal: #008000;
+    --cor-segundaria: #808080;
 }
-
 
 * {
     margin: 0;
     padding: 0;
-}
-
-.corpo {
     box-sizing: border-box;
-    height: 100vw;
 }
 
 .cabecalho {
-    background-color: green;
+    background-color: var(--cor-principal);
     display: flex;
     justify-content: center;
 }
 
 .cabecalho__titulo {
     margin: 15px;
-    border: solid 1px black;
+    border: solid 1px #000000;
     padding: 5px 10px;
-    background-color: grey;
+    background-color: var(--cor-segundaria);
 }
 
 .conteudo {
-    margin: 45px;
+    margin: 40px 250px ;
     display: flex;
     gap: 40px;
     flex-direction: column;
 }
 
 .conteudo__section {
-    background-color: grey;
+    background-color: var(--cor-segundaria);
     display: flex;
     flex-direction: column;
-    border-radius: 10px; 
-    gap: 80px;
+    border-radius: 5px; 
+    gap: 40px;
 }
 
 .conteudo__titulo {
@@ -56,17 +51,27 @@
     gap: 40px;
 }
 
-
 .inputs {
-    max-width: 100%;
+    max-width: 100;
     display: flex;
-    justify-content: space-around;
+    gap: 10px;
+    flex-direction: column;
+    align-content: space-around ;
+
+}
+.formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 10px;
 }
 
 .formulario-dados {
-    border: solid 1px black;
-    border-radius: 2px;
-    max-width: 20vw;
+    margin: 0 15px 5px 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    width: 90%;
 }
 
 .formulario-dados::placeholder {
@@ -78,27 +83,27 @@
 }
 
 .botao {
-    margin: 3px;
+    margin: 15px 10px;
     padding: 3px;
     border-radius: 5px;
 }
 
 .submit {
-    background-color: green;
+    background-color: #008000;
     color: black;
     border: solid 2px black;
     cursor: pointer;
 }
 
 .reset {
-    background-color: red;
+    background-color: #ff0000;
     color: black;
     border: solid 2px black;
     cursor: pointer;
 }
 
 .conteudo__listagem {
-    background-color: gray;
+    background-color: var(--cor-segundaria);
     display: flex;
     flex-direction: column;
 }
@@ -108,7 +113,7 @@
 }
 
 .rodape {
-    background-color: green;
+    background-color: var(--cor-principal);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -116,10 +121,20 @@
 
 
 /* Resposividade */
-@media screen and (max-width: 1728px) {
-
-}
-
 @media screen and (max-width: 1024px) {
+    .conteudo__section {
+        gap: 10px;
+    }
 
+    .inputs {
+        max-width: 100rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40PX;
+    }
+
+    .formulario-dados {
+        width: 100%;
+    }
 }
