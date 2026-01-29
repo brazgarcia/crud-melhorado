@@ -22,4 +22,21 @@ form.addEventListener('submit', async(e) => {
     loadUsers();
 });
 
+async function loadUsers() {
+    const res = await fetch(API_URL);
+    const users = await res.json();
+
+    list.innerHTML = '';
+    users.forEach(user => {
+        const li = document.createElement('li');
+        li.innerHTML = `${user.nome} | ${user.cpf} | ${user.email} | ${user.telefone} | ${user.cidade}<button onclick="deleteUser(${user.id})">Excluir</button>`;
+        list.appendChild(li);    
+    });
+}
  
+async function deleteUser(id) {
+    await fetch(`${API_URL}/${id}`, {method: 'DELETE' });
+    loadUsers();
+}
+
+loadUsers();

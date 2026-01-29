@@ -47,7 +47,7 @@ let idCounter = 1;
 
     // Delete
     app.delete('/users/:id', (req, res) => {
-        users = users.filter(u => u.id !== parseInt(res.params.id));
+        users = users.filter(u => u.id !== parseInt(req.params.id));
         res.status(204).send();
     });
 
