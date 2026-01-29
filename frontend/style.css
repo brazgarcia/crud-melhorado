@@ -38,6 +38,7 @@
 }
 
 .conteudo__titulo {
+    margin: 10px 0 0 0;
     text-align: center;   
 }
 
@@ -48,17 +49,20 @@
 .conteudo__formulario {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
 }
 
 .inputs {
-    max-width: 100;
+    width: 93%;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-direction: column;
-    align-content: space-around ;
-
+    border: double  .2rem #363636;
+    border-radius: 15px;
+    padding: 15px 5px;
 }
+
 .formulario {
     display: flex;
     justify-content: space-between;
@@ -67,11 +71,11 @@
 }
 
 .formulario-dados {
-    margin: 0 15px 5px 0;
+    margin: 0 15px 0 0;
     border: 1px solid #000;
     border-radius: 5px;
     padding: 5px;
-    width: 90%;
+    width: 87%;
 }
 
 .formulario-dados::placeholder {
