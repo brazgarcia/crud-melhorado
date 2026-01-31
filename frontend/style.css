@@ -23,7 +23,6 @@
 }
 
 .conteudo {
-    margin: 40px 250px ;
     display: flex;
     gap: 40px;
     flex-direction: column;
@@ -31,6 +30,7 @@
 
 .conteudo__section {
     background-color: var(--cor-segundaria);
+    margin: 40px 250px;
     display: flex;
     flex-direction: column;
     border-radius: 5px; 
@@ -52,7 +52,6 @@
 }
 
 .inputs {
-    max-width: 100;
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -83,7 +82,7 @@
 }
 
 .botao {
-    margin: 15px 10px;
+    margin: 10px 5px;
     padding: 3px;
     border-radius: 5px;
 }
@@ -102,14 +101,47 @@
     cursor: pointer;
 }
 
-.conteudo__listagem {
+
+.conteudo__lista {
+    margin: 40px 100px;
     background-color: var(--cor-segundaria);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 5px 5px 15px 5px;
+
 }
 
-.listagem__titulo {
+.lista__titulo {
     text-align: center;
+    padding-bottom: 15px;
+}
+
+.table {
+    width: 97%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #008000;
+}
+
+.table thead tr th {
+    padding: 5px 0; 
+}
+
+.table tr {
+    border: 1px solid #000;
+}
+
+.table .lista__user tr td {
+    padding: 5px 0; 
+}
+
+.table .lista__user tr:hover {
+    background: #acaead;
+}
+
+.lista__user {
+    background-color: #ffffff;
 }
 
 .rodape {
@@ -120,7 +152,7 @@
 }
 
 
-/* Resposividade */
+/* Resposividade
 @media screen and (max-width: 1024px) {
     .conteudo__section {
         gap: 10px;
@@ -137,4 +169,4 @@
     .formulario-dados {
         width: 100%;
     }
-}
+} */

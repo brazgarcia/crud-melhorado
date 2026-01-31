@@ -1,7 +1,7 @@
 const API_URL = 'http://localhost:3000/users';
 
 const form = document.getElementById('userForm');
-const list = document.getElementById('usersList');
+const list = document.getElementById('userList');
 
 form.addEventListener('submit', async(e) => {
     e.preventDefault();
@@ -28,11 +28,12 @@ async function loadUsers() {
 
     list.innerHTML = '';
     users.forEach(user => {
-        const li = document.createElement('li');
-        li.innerHTML = `${user.nome} | ${user.cpf} | ${user.email} | ${user.telefone} | ${user.cidade}<button onclick="deleteUser(${user.id})">Excluir</button>`;
-        list.appendChild(li);    
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${user.nome}</td><td>${user.cpf}</td><td>${user.email}</td><td>${user.telefone}</td><td>${user.cidade}</td><td><button class="botao" onclick="putUser(${user.id})">Atualizar</button><td><td><button class="botao" onclick="deleteUser(${user.id})">Excluir</button><td>`;
+        list.appendChild(tr);    
     });
 }
+
  
 async function deleteUser(id) {
     await fetch(`${API_URL}/${id}`, {method: 'DELETE' });
