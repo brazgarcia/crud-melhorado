@@ -29,7 +29,7 @@ async function loadUsers() {
     list.innerHTML = '';
     users.forEach(user => {
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${user.nome}</td><td>${user.cpf}</td><td>${user.email}</td><td>${user.telefone}</td><td>${user.cidade}</td><td><button class="botao" onclick="putUser(${user.id})">Atualizar</button><td><td><button class="botao" onclick="deleteUser(${user.id})">Excluir</button><td>`;
+        tr.innerHTML = `<td>${user.nome}</td><td>${user.cpf}</td><td>${user.email}</td><td>${user.telefone}</td><td>${user.cidade}</td><td><button class="botao botao-responsividade" onclick="putUser(${user.id})">Atualizar</button><td><td><button class="botao botao-responsividade" onclick="deleteUser(${user.id})">Excluir</button><td>`;
         list.appendChild(tr);    
     });
 }

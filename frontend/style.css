@@ -106,10 +106,10 @@
     margin: 40px 100px;
     background-color: var(--cor-segundaria);
     display: flex;
+    border-radius: 5px; 
     flex-direction: column;
     align-items: center;
     padding: 5px 5px 15px 5px;
-
 }
 
 .lista__titulo {
@@ -151,22 +151,81 @@
     text-align: center;
 }
 
+.perfil {
+    text-decoration: none;
+    color: #000000;
+}
 
-/* Resposividade
+.perfil:hover {
+    color: #ffffff;
+}
+
+
+/* Resposividade */
 @media screen and (max-width: 1024px) {
-    .conteudo__section {
-        gap: 10px;
+    
+    .cabecalho__titulo {
+        text-align: center;
     }
 
-    .inputs {
-        max-width: 100rem;
+    .conteudo {
+    gap: 0px;
+    font-size: 12px;
+    }
+    
+    .conteudo__section {
+    background-color: var(--cor-segundaria);
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px; 
+    gap: 20px;
+    font-size: 12px;
+    }
+
+    .formulario {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 40PX;
     }
 
-    .formulario-dados {
-        width: 100%;
+    .botao {
+    margin: 2px 2px;
+    padding: 3px;
+    border-radius: 5px;
     }
-} */
+
+    .conteudo__lista {
+    background-color: var(--cor-segundaria);
+    margin: 20px 10px;
+    font-size: 7px;
+    }
+
+    .lista__titulo {
+    text-align: center;
+    padding-bottom: 10px;
+    }
+
+    .table {
+        border-collapse: collapse;
+        text-align: center;
+        background-color: #008000;
+    }
+
+    .table thead tr th {
+        padding: 0px 0; 
+    }
+
+    .table tr {
+        border: 1px solid #000;
+    }
+
+    .table .lista__user tr td {
+        padding: 0px 0; 
+    }
+
+    .botao-responsividade {
+        font-size: 5px;
+    }
+        
+
+}
