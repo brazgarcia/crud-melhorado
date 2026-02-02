@@ -10,6 +10,9 @@ const port = 3000;
 let users = [];
 let idCounter = 1;
 
+let products = [];
+let idCounterProducts = 1;
+
 // Users
     // Create
     app.post('/users', (req, res) => {
@@ -50,6 +53,47 @@ let idCounter = 1;
         users = users.filter(u => u.id !== parseInt(req.params.id));
         res.status(204).send();
     });
+
+// Products
+    // Create
+    app.post('/products', (req, res) => {
+        const product = {
+            id: idCounterProducts++,
+            nomeProduto: req.body.nomeProduto,
+            codBarras: req.body.codBarras,
+            categoria: req.body.categoria,
+            marca: req.body.marca, 
+            descricao: req.body.descricao
+        };
+        products.push(product)
+        res.status(201).json(products);
+    });
+
+    // Read
+    app.get('/products', (req, res) => {
+        res.json(products);
+    });
+
+    // Put
+    app.put('/products/:id', (req, res) => {
+        const id = parseInt(req.params.id);
+        const product = products.find(u => u.id === id);
+
+        if(!product) return res.status(404).json({ error: 'Usuário não encontrado!' });
+
+        product.nomeProduto = req.body.nomeProduto;
+        product.codBarras = req.body.codBarras;
+        product.categoria = req.body.categoria;
+        product.marca = req.body.marca;
+        product.descricao = req.body.descricao;
+        res.json(product);
+    });
+
+    // Delete
+    app.delete('/products/:id', (req, res) => {
+        products = products.filter(u => u.id !== parseInt(req.params.id));
+        res.status(204).send();
+    })
 
 // Startar servidor
 app.listen(port, () => {
