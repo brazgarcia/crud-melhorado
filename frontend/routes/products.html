@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <body class="corpo">
+
+    <header class="cabecalho">
+        <h3 class="cabecalho__titulo">Desenvolvendo um CRUD simples com cadastro de usuários</h3>
+    </header>
+
+    <main class="conteudo">
+        <section class="conteudo__section">
+            <div class="introducao-formulario">
+                <h1 class="conteudo__titulo">Formulário de cadastro de produtos</h1>
+    
+                <p class="conteudo__texto">
+                    Preencha este formulário para fazer o cadastro de novos produtos.
+                </p>    
+            </div>
+
+            <form class="conteudo__formulario" id="userForm">
+                <div class="inputs">
+                    <label for="nome" class="formulario">Nome do produto:
+                        <input class="formulario-dados" type="text" name="nomePrduto" id="nomeProduto" placeholder="Nome do produto" required>
+                    </label>
+                    <label for="cpf" class="formulario">Código de barras:
+                        <input class="formulario-dados" type="text" name="codBarras" id="codBarras" placeholder="Insira o código de barras" required>
+                    </label>
+                    <label for="email" class="formulario">Categoria:
+                        <input class="formulario-dados" type="text" name="categoria" id="categoria" placeholder="Qual é a categoria" required>
+                    </label>
+                    <label for="cidade" class="formulario">Marca:
+                        <input class="formulario-dados" type="text" name="marca" id="marca" placeholder="Insira a marca do produto" required>
+                    </label>
+                    <label for="telefone" class="formulario">Descrição:
+                        <input class="formulario-dados" type="text" name="descricao" id="descricao" placeholder="Descreva sobre o produto" required> 
+                    </label>
+                </div>
+                <div class="botoes">
+                    <button class="botao submit" type="submit">Cadastrar</button>
+                    <button class="botao reset" type="reset">Limpar</button>
+                </div>
+            </form>
+        </section>
+    
+        <section class="conteudo__lista">
+            <h2 class="lista__titulo">Lista de usuários cadastrados</h2>
+                <table class="table" id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>NOME</th>
+                            <th>CPF</th>
+                            <th>E-MAIL</th>
+                            <th>TELEFONE</th>
+                            <th>CIDADE</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="lista__user" id="userList">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+        </section>
+    </main>
+    
+    <footer class="rodape">
+        <p class="rodape__texto">Desenvolvido por <a href="http://www.linkedin.com/in/braz-garcia" class="perfil" target="_blank">Braz Garcia</a></p>
+        <p class="rodape__texto">Conteúdo de estudo!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</body>
+</html>
