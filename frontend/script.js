@@ -1,9 +1,13 @@
 const API_URL = 'http://localhost:3000/users';
 
-const form = document.getElementById('userForm');
-const list = document.getElementById('userList');
+const userForm = document.getElementById('userForm');
+const userList = document.getElementById('userList');
+const productForm = document.getElementById('productForm');
+const productList = document.getElementById('productList'); 
 
-form.addEventListener('submit', async(e) => {
+
+// Criar usuário
+userForm.addEventListener('submit', async(e) => {
     e.preventDefault();
 
     const nome = document.getElementById('nome').value;
@@ -18,26 +22,42 @@ form.addEventListener('submit', async(e) => {
         body: JSON.stringify({ nome, cpf, email, telefone, cidade })
     });
 
-    form.reset();
+    userForm.reset();
     loadUsers();
 });
 
+
+// Carregar lista de usuários
 async function loadUsers() {
     const res = await fetch(API_URL);
     const users = await res.json();
 
-    list.innerHTML = '';
+    userList.innerHTML = '';
     users.forEach(user => {
         const tr = document.createElement('tr');
         tr.innerHTML = `<td>${user.nome}</td><td>${user.cpf}</td><td>${user.email}</td><td>${user.telefone}</td><td>${user.cidade}</td><td><button class="botao botao-responsividade" onclick="putUser(${user.id})">Atualizar</button><td><td><button class="botao botao-responsividade" onclick="deleteUser(${user.id})">Excluir</button><td>`;
-        list.appendChild(tr);    
+        userList.appendChild(tr);    
     });
 }
 
- 
+// Deletar usuário
 async function deleteUser(id) {
     await fetch(`${API_URL}/${id}`, {method: 'DELETE' });
     loadUsers();
 }
 
+// Criar Produto
+productForm.addEventListener('submit', async(e) => {
+    e.preventDefault();
+    
+    const nomeProduto = document.getElementById('nomeProduto').value;
+    const codBarras = document.getElementById('codBarras').value;
+    const categoria = document.getElementById('categoria').value;
+    const marca = document.getElementById('marca').value;
+    const descricao = document.getElementById('descricao').value;
+
+});
+
+
 loadUsers();
+loadProducts();
