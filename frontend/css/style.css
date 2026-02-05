@@ -135,11 +135,19 @@
     padding: 5px 0; 
 }
 
+.table .lista__product tr td {
+    padding: 5px 0; 
+}
+
 .table .lista__user tr:hover {
     background: #acaead;
 }
 
-.lista__user {
+.table .lista__product tr:hover {
+    background: #acaead;
+}
+
+.lista__user .lista__product {
     background-color: #ffffff;
 }
 
