@@ -15,7 +15,7 @@ productForm.addEventListener('submit', async(e) => {
 
     await fetch (API_URL_products, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json '},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nomeProduto, codBarras, categoria, marca, descricao })
     });
 
@@ -39,8 +39,8 @@ async function loadProducts() {
         <td>${product.categoria}</td>
         <td>${product.marca}</td>
         <td>${product.descricao}</td>
-        <td><button class="botao botao-responsividade" onclick="putProduct">${product.id}</button></td>
-        <td><button class="botao botao-responsividade" onclick="deleteProduct">${product.id}</button></td>
+        <td><button class="botao botao-responsividade" onclick="putProduct(${product.id})">Atualizar</button></td>
+        <td><button class="botao botao-responsividade" onclick="deleteProduct(${product.id})">Deletar</button></td>
         `;
         productList.appendChild(tr);
     });

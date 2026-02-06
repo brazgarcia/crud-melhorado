@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Crud-melhorado</title>
+    <title>Gerenciador de usuários / produtos</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -12,70 +12,38 @@
 <body class="corpo">
 
     <header class="cabecalho">
-        <h3 class="cabecalho__titulo">Desenvolvendo um CRUD simples com cadastro de usuários</h3>
+        <a class="link-logo" href="/frontend/index.html">
+            <h3 class="cabecalho__titulo">UserPro</h3>
+        </a>
+        <div>
+            <a href="routes/users.html">Usuários</a>
+            <a href="routes/products.html">produtos</a>
+            <a href="routes/dashboard.html">Dashboard</a>
+            
+            <a href="routes/login.html">Entrar</a>
+
+            <a href="# " class="nav-bar">
+                <div class="tres_barras"></div>
+                <div class="tres_barras"></div>
+                <div class="tres_barras"></div>
+            </a>
+        </div>
     </header>
 
+
+
+
+    
+
     <main class="conteudo">
-        <section class="conteudo__section">
-            <div class="introducao-formulario">
-                <h1 class="conteudo__titulo">Formulário de cadastro de usuário</h1>
-    
-                <p class="conteudo__texto">
-                    Preencha este formulário para fazer o cadastro de novos usuários.
-                </p>    
-            </div>
+        <section>
+            <h1>Criar e gerenciar seus usuários e produtos nunca foi tão simples, fácil e  intuitivo</h1>
+            <h3>Do papel ao digital em um clique. Gerencie usuários e produtos com inteligência, otimize seu tempo e foque no que realmente importa.</h3>
 
-            <form class="conteudo__formulario" id="userForm">
-                <div class="inputs">
-                    <label for="nome" class="formulario">Nome:
-                        <input class="formulario-dados" type="text" name="nome" id="nome" placeholder="Nome completo" required>
-                    </label>
-                    <label for="cpf" class="formulario">CPF:
-                        <input class="formulario-dados" type="text" name="cpf" id="cpf" placeholder="Insira seu CPF" required>
-                    </label>
-                    <label for="email" class="formulario">E-mail:
-                        <input class="formulario-dados" type="email" name="email" id="email" placeholder="E-mail" required>
-                    </label>
-                    <label for="telefone" class="formulario">Telefone:
-                        <input class="formulario-dados" type="tel" name="telefone" id="telefone" placeholder="Telefone" required> 
-                    </label>
-                    <label for="cidade" class="formulario">Cidade:
-                        <input class="formulario-dados" type="text" name="cidade" id="cidade" placeholder="Digire sua cidade" required>
-                    </label>
-                </div>
-                <div class="botoes">
-                    <button class="botao submit" type="submit">Cadastrar</button>
-                    <button class="botao reset" type="reset">Limpar</button>
-                </div>
-            </form>
+            <a href="#">Crie sua conta grátis</a>
         </section>
-    
-        <section class="conteudo__lista">
-            <h2 class="lista__titulo">Lista de usuários cadastrados</h2>
-                <table class="table" id="usersTable">
-                    <thead>
-                        <tr>
-                            <th>NOME</th>
-                            <th>CPF</th>
-                            <th>E-MAIL</th>
-                            <th>TELEFONE</th>
-                            <th>CIDADE</th>
-                            <th></th>
-                        </tr>
-                    </thead>
 
-                    <tbody class="lista__user" id="userList">
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-
-                </table>
-        </section>
+        <img src="assets/home_produtividade.png" alt="Imagem de produtividade">
     </main>
     
     <footer class="rodape">

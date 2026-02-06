@@ -45,6 +45,12 @@ async function loadUsers() {
     });
 }
 
+// Atualizar usuário
+async function putUser(id) {
+   document.getElementById('nome').value = 'user.nome';
+}
+
+
 // Deletar usuário
 async function deleteUser(id) {
     await fetch(`${API_URL_users}/${id}`, {method: 'DELETE' });

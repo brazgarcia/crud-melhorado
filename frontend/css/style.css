@@ -1,3 +1,5 @@
+@import url("header.css");
+
 :root {
     --cor-principal: #008000;
     --cor-segundaria: #808080;
@@ -9,18 +11,6 @@
     box-sizing: border-box;
 }
 
-.cabecalho {
-    background-color: var(--cor-principal);
-    display: flex;
-    justify-content: center;
-}
-
-.cabecalho__titulo {
-    margin: 15px;
-    border: solid 1px #000000;
-    padding: 5px 10px;
-    background-color: var(--cor-segundaria);
-}
 
 .conteudo {
     display: flex;

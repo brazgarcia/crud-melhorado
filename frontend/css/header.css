@@ -1,0 +1,36 @@
+.cabecalho {
+    background-color: var(--cor-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho__titulo {
+    margin: 15px;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: var(--cor-segundaria);
+}
+
+.link-logo {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tres_barras {
+    
+    background-color: black;
+    width: 35px;
+    height: 4px;
+    
+
+}
+
+

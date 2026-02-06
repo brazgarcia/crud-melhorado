@@ -13,46 +13,46 @@ let idCounter = 1;
 let products = [];
 let idCounterProducts = 1;
 
-// // Users
-//     // Create
-//     app.post('/users', (req, res) => {
-//         const user = {
-//             id: idCounter++,
-//             nome: req.body.nome,
-//             cpf: req.body.cpf,
-//             email: req.body.email,
-//             telefone: req.body.telefone,
-//             cidade: req.body.cidade
-//         };
-//         users.push(user);
-//         res.status(201).json(user);
-//     });
+// Users
+    // Create
+    app.post('/users', (req, res) => {
+        const user = {
+            id: idCounter++,
+            nome: req.body.nome,
+            cpf: req.body.cpf,
+            email: req.body.email,
+            telefone: req.body.telefone,
+            cidade: req.body.cidade
+        };
+        users.push(user);
+        res.status(201).json(user);
+    });
 
-//     // Read
-//     app.get('/users', (req, res) => {
-//         res.json(users);
-//     });
+    // Read
+    app.get('/users', (req, res) => {
+        res.json(users);
+    });
 
-//     // Update
-//     app.put('/users/:id', (req, res) => {
-//         const id = parseInt(req.params.id);
-//         const user = users.find(u => u.id === id);
+    // Update
+    app.put('/users/:id', (req, res) => {
+        const id = parseInt(req.params.id);
+        const user = users.find(u => u.id === id);
 
-//         if (!user) return res.status(404).json({ error: "Usuário não encontrado" });
+        if (!user) return res.status(404).json({ error: "Usuário não encontrado" });
 
-//         user.nome = req.body.nome;
-//         user.cpf = req.body.cpf;
-//         user.email = req.body.email;
-//         user.telefone = req.body.telefone;
-//         user.cidade = req.body.cidade;
-//         res.json(user);
-//     });
+        user.nome = req.body.nome;
+        user.cpf = req.body.cpf;
+        user.email = req.body.email;
+        user.telefone = req.body.telefone;
+        user.cidade = req.body.cidade;
+        res.json(user);
+    });
 
-//     // Delete
-//     app.delete('/users/:id', (req, res) => {
-//         users = users.filter(u => u.id !== parseInt(req.params.id));
-//         res.status(204).send();
-//     });
+    // Delete
+    app.delete('/users/:id', (req, res) => {
+        users = users.filter(u => u.id !== parseInt(req.params.id));
+        res.status(204).send();
+    });
 
 // Products
     // Create
@@ -66,7 +66,7 @@ let idCounterProducts = 1;
             descricao: req.body.descricao
         };
         products.push(product)
-        res.status(201).json(products);
+        res.status(201).json(product);
     });
 
     // Read
@@ -79,7 +79,7 @@ let idCounterProducts = 1;
         const id = parseInt(req.params.id);
         const product = products.find(u => u.id === id);
 
-        if(!product) return res.status(404).json({ error: 'Usuário não encontrado!' });
+        if(!product) return res.status(404).json({ error: 'Produto não encontrado!' });
 
         product.nomeProduto = req.body.nomeProduto;
         product.codBarras = req.body.codBarras;
