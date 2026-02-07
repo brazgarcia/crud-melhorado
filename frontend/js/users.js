@@ -38,16 +38,31 @@ async function loadUsers() {
             <td>${user.email}</td>
             <td>${user.telefone}</td>
             <td>${user.cidade}</td>
-            <td><button class="botao botao-responsividade" onclick="putUser(${user.id})">Atualizar</button><td>
-            <td><button class="botao botao-responsividade" onclick="deleteUser(${user.id})">Excluir</button><td>
+            <td><button 
+                class="botao botao-responsividade" 
+                onclick="editUser(this)"
+                data-id="${user.id}"
+                data-nome="${user.nome}"
+                data-cpf="${user.cpf}"
+                data-email="${user.email}"
+                data-telefone="${user.telefone}"
+                data-cidade="${user.cidade}"
+            >Atualizar</button></td>
+            <td><button class="botao botao-responsividade" onclick="deleteUser(${user.id})">Excluir</button></td>
         `;
         userList.appendChild(tr);    
     });
 }
 
 // Atualizar usuário
-async function putUser(id) {
-   document.getElementById('nome').value = 'user.nome';
+function editUser(button) {
+
+    document.getElementById('nome').value = button.dataset.nome;
+    document.getElementById('cpf').value = button.dataset.cpf;
+    document.getElementById('email').value = button.dataset.email;
+    document.getElementById('telefone').value = button.dataset.telefone;
+    document.getElementById('cidade').value = button.dataset.cidade;
+ 
 }
 
 
