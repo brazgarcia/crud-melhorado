@@ -157,6 +157,10 @@
     color: #ffffff;
 }
 
+img {
+    width: 50%;
+}
+
 /* Resposividade */
 @media screen and (max-width: 1024px) {
     
