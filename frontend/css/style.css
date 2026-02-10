@@ -18,6 +18,8 @@
     flex-direction: column;
 }
 
+.descricao__section
+
 .conteudo__section {
     background-color: var(--cor-segundaria);
     margin: 40px 250px;
