@@ -1,5 +1,5 @@
 @import url("header.css");
-@import url("index.css");
+@import url("home.css");
 
 :root {
     --cor-principal: #008000;
@@ -18,8 +18,6 @@
     gap: 40px;
     flex-direction: column;
 }
-
-.descricao__section
 
 .conteudo__section {
     background-color: var(--cor-segundaria);

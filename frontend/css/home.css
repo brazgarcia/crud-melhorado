@@ -1,0 +1,27 @@
+.conteudo__home {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px;
+    align-items: center;
+    padding: 80px 40px;
+    gap: 40px;
+    background-color: var(--cor-segundaria);
+    border-radius: 5%;
+    
+}
+
+.descricao__section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.descriacao__img {
+    width: 40vw;
+}
+
+@media screen and (max-width: 1024px) {
+
+
+}
