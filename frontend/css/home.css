@@ -6,7 +6,7 @@
     padding: 80px 40px;
     gap: 40px;
     background-color: var(--cor-segundaria);
-    border-radius: 5%;
+    border-radius: 7px;
     
 }
 
@@ -15,6 +15,15 @@
     flex-direction: column;
     gap: 20px;
     
+}
+
+.descricao__cadastrar {
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    background-color: #89de35;
+    width: 20vw;
 }
 
 .descriacao__img {
