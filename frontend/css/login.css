@@ -1,0 +1,9 @@
+.div__login {
+    background-color: var(--cor-segundaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vw;
+    padding: 400px 200px;
+}
