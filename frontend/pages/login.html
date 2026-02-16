@@ -8,18 +8,21 @@
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
-<body>
-    <div class="div__login">
-        <img src="teste" alt="Icone-login">
-
+<body class="corpo__pagina">
+    <div class="div__login"> 
+        <a class="link-logo" href="/frontend/pages/home.html">
+            <h3 class="cabecalho__titulo">UserPro</h3>
+        </a>
         <form action="" method="get">
             
-            <input type="email" placeholder="E-mail">
-            <input type="password" name="senha" id="senha" placeholder="Senha">
+            <div class="input-login">
+                <input class="exclusivo-login" type="email" placeholder="E-mail">
+                <input class="exclusivo-login" type="password" name="senha" id="senha" placeholder="Senha">
+            </div>
             
-            <div>
-                <button type="submit">Entrar</button>
+            <div class="botao-login">
                 <button type="reset">Cancelar</button>
+                <button type="submit">Entrar</button>
             </div>
 
         </form>

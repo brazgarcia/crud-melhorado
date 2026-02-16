@@ -13,17 +13,24 @@
 .descricao__section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 45px;
     
 }
 
-.descricao__cadastrar {
-    align-items: center;
+.teste {
+    display: flex;
+    justify-content: center;
     text-align: center;
+}
+
+.descricao__cadastrar {
     text-decoration: none;
     color: #000000;
     background-color: #89de35;
-    width: 20vw;
+    width: 15vw;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    padding: 7px 0;
 }
 
 .descriacao__img {
