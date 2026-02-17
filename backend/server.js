@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const bcrypt = require('bcrypt');
 
 const app = express();
 app.use(cors());
@@ -22,10 +23,9 @@ let idCounterProducts = 1;
         const user = {
             id: idCounter++,
             nome: req.body.nome,
-            cpf: req.body.cpf,
             email: req.body.email,
-            telefone: req.body.telefone,
-            cidade: req.body.cidade
+            senha: req.body.senha,
+            role: req.body.role
         };
         users.push(user);
         res.status(201).json(user);
