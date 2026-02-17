@@ -40,3 +40,8 @@
     margin-top: 20px;
     text-align: center;
 }
+
+.link__botao-cadastrar {
+    text-decoration: none;
+    color: #000000;
+}

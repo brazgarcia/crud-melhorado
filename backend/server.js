@@ -10,6 +10,9 @@ const port = 3000;
 let users = [];
 let idCounter = 1;
 
+let people = [];
+let idCounterPeople = 1;
+
 let products = [];
 let idCounterProducts = 1;
 
@@ -54,6 +57,48 @@ let idCounterProducts = 1;
         res.status(204).send();
     });
 
+// People
+    // Create
+    app.post('/people', (req, res) => {
+        const person = {
+            id: idCounterPeople++,
+            nome: req.body.nome,
+            cpf: req.body.cpf,
+            email: req.body.email,
+            telefone: req.body.telefone,
+            cidade: req.body.cidade
+        };
+        people.push(person);
+        res.status(201).json(person);
+    });
+
+    // Read
+    app.get('/people', (req, res) => {
+        res.json(people);
+    });
+
+    // Update
+    app.put('/people/:id', (req, res) => {
+        const id = parseInt(req.params.id);
+        const person = people.find(u => u.id === id);
+
+        if (!person) return res.status(404).json({ error: "Pessoa não encontrada" });
+
+        person.nome = req.body.nome;
+        person.cpf = req.body.cpf;
+        person.email = req.body.email;
+        person.telefone = req.body.telefone;
+        person.cidade = req.body.cidade;
+        res.json(person);
+    });
+
+    // Delete
+    app.delete('/people/:id', (req, res) => {
+        people = people.filter(u => u.id !== parseInt(req.params.id));
+        res.status(204).send();
+    });
+
+  
 // Products
     // Create
     app.post('/products', (req, res) => {
