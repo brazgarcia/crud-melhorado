@@ -69,6 +69,20 @@
     color: rgb(59, 58, 58);
 }
 
+.formulario-radio {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    text-align: center;
+}
+
+.teste {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    
+}
+
 .botoes {
    text-align: center;
 }
