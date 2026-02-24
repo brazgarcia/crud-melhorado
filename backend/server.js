@@ -20,16 +20,22 @@ let idCounterProducts = 1;
 
 // Users
     // Create
-    app.post('/users', (req, res) => {
-        const user = {
-            id: idCounter++,
-            nome: req.body.nome,
-            email: req.body.email,
-            senha: req.body.senha,
-            role: req.body.role
-        };
-        users.push(user);
-        res.status(201).json(user);
+    app.post('/users', async (req, res) => {
+        try {
+            const hash = await bcrypt.hash(req.body.senha, 10);
+            const user = {
+                id: idCounter++,
+                nome: req.body.nome,
+                email: req.body.email,
+                senha: hash,
+                role: req.body.role
+            };
+            users.push(user);
+            res.status(201).json({ id: user.id, nome: user.nome, email: user.email });
+        } catch (error) {
+            res.status(500).json({ error: "Erro inesperádo!" });
+        }
+
     });
 
     // Read
