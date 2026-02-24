@@ -22,7 +22,6 @@ userForm.addEventListener('submit', async(e) => {
     loadusers();
 });
 
-
 // Carregar lista de usuários
 async function loadusers() {
     const res = await fetch(API_URL_users);
@@ -53,14 +52,11 @@ async function loadusers() {
 
 // Atualizar usuário
 function edituser(button) {
-
     document.getElementById('nome').value = button.dataset.nome;
     document.getElementById('email').value = button.dataset.email;
     document.getElementById('senha').value = button.dataset.senha;
     document.getElementById('nivel').value = button.dataset.nivel;
- 
 }
-
 
 // Deletar usuário
 async function deleteuser(id) {
