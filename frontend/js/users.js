@@ -3,24 +3,24 @@ const API_URL_users = 'http://localhost:3000/users';
 const userForm = document.getElementById('userForm');
 const userList = document.getElementById('userList');
 
-// Criar usuário
-userForm.addEventListener('submit', async(e) => {
-    e.preventDefault();
+// // Criar usuário
+// userForm.addEventListener('submit', async(e) => {
+//     e.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const telefone = document.getElementById('senha').value;
-    const cidade = document.getElementById('nivel').value;
+//     const nome = document.getElementById('nome').value;
+//     const email = document.getElementById('email').value;
+//     const senha = document.getElementById('senha').value;
+//     const nivel = document.getElementById('role').value;
 
-    await fetch (API_URL_users, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, email, senha, nivel })
-    });
+//     await fetch (API_URL_users, {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({ nome, email, senha, nivel })
+//     });
 
-    userForm.reset();
-    loadusers();
-});
+//     userForm.reset();
+//     loadusers();
+// });
 
 // Carregar lista de usuários
 async function loadusers() {
@@ -33,7 +33,6 @@ async function loadusers() {
         tr.innerHTML = `
             <td>${user.nome}</td>
             <td>${user.email}</td>
-            <td>${user.senha}</td>
             <td>${user.nivel}</td>
             <td><button 
                 class="botao botao-responsividade" 
@@ -41,7 +40,6 @@ async function loadusers() {
                 data-id="${user.id}"
                 data-nome="${user.nome}"
                 data-email="${user.email}"
-                data-senha="${user.senha}"
                 data-nivel="${user.nivel}"
             >Atualizar</button></td>
             <td><button class="botao botao-responsividade" onclick="deleteuser(${user.id})">Excluir</button></td>

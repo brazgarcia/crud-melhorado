@@ -23,6 +23,7 @@ let idCounterProducts = 1;
     app.post('/users', async (req, res) => {
         try {
             const hash = await bcrypt.hash(req.body.senha, 10);
+            console.log('teste');
             const user = {
                 id: idCounter++,
                 nome: req.body.nome,
