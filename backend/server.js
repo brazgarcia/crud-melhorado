@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
-const jsonwebtoken = require('jsonwebtoken');
+// const jsonwebtoken = require('jsonwebtoken');
 
 const app = express();
 app.use(cors());
@@ -20,10 +20,9 @@ let idCounterProducts = 1;
 
 // Users
     // Create
-    app.post('/users', async (req, res) => {
+    app.post('/users', (req, res) => {
         try {
-            const hash = await bcrypt.hash(req.body.role, 10);
-            console.log('teste');
+            const hash = bcrypt.hash(req.body.senha, 10);
             const user = {
                 id: idCounter++,
                 nome: req.body.nome,
@@ -32,7 +31,7 @@ let idCounterProducts = 1;
                 role: req.body.role
             };
             users.push(user);
-            res.status(201).json({ id: user.id, nome: user.nome });
+            res.status(201).json(user);
         } catch (error) {
             res.status(500).json({ error: "Erro inesperádo!" });
         }

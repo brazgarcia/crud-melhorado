@@ -9,7 +9,7 @@ userForm.addEventListener('submit', async(e) => {
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
-    const nivel = document.getElementsByName('role').value;
+    const nivel = document.querySelector('input[name="role"]:checked')?.value;
 
     await fetch (API_URL_users, {
         method: 'POST',
