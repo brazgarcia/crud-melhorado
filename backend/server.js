@@ -22,7 +22,7 @@ let idCounterProducts = 1;
     // Create
     app.post('/users', async (req, res) => {
         try {
-            const hash = await bcrypt.hash(req.body.senha, 10);
+            const hash = await bcrypt.hash(req.body.role, 10);
             console.log('teste');
             const user = {
                 id: idCounter++,
@@ -32,7 +32,7 @@ let idCounterProducts = 1;
                 role: req.body.role
             };
             users.push(user);
-            res.status(201).json({ id: user.id, nome: user.nome, email: user.email });
+            res.status(201).json({ id: user.id, nome: user.nome });
         } catch (error) {
             res.status(500).json({ error: "Erro inesperádo!" });
         }
